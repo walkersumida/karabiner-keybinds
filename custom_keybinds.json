@@ -104,6 +104,39 @@
       ]
     },
     {
+      "description": "Emacs tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com\\.googlecode\\.iterm2",
+                "com\\.apple\\.Terminal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Emacs down arrow",
       "manipulators": [
         {
